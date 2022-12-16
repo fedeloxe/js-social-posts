@@ -105,7 +105,9 @@ const arrayLike = [];
 
 for (let i=0; i<bottoneLike.length; i++){
 
-    bottoneLike[i].addEventListener('click', function(){
+    bottoneLike[i].addEventListener('click', function(e){
+
+        e.preventDefault();
 
         const postId = this.dataset.postid;
         const likes = document.getElementById(`like-counter-${postId}`);
